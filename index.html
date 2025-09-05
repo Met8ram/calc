@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="title">Destiny Matrix Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="lang.js" defer></script>
+</head>
+<body>
+  <!-- Language Switcher -->
+  <header class="header">
+    <nav class="lang-switcher">
+      <button data-lang="en">EN</button>
+      <button data-lang="it">IT</button>
+      <button data-lang="ua">UA</button>
+    </nav>
+  </header>
+
+  <!-- Intro Screen -->
+  <main id="intro" class="intro-screen">
+    <h1 class="main-title" data-i18n="app_name">Destiny Matrix Calculator</h1>
+    <h2 class="subtitle" data-i18n="enter_data">Enter your data:</h2>
+
+    <div class="input-group">
+      <input id="birthday" class="input-date" placeholder="dd.mm.yyyy" type="text" inputmode="tel">
+      <button class="btn" onclick="Calc()" data-i18n="calculate">Calculate</button>
+    </div>
+
+    <p id="elabel" class="error-label" style="visibility: hidden">!!!</p>
+  </main>
+
+  <!-- Results Screen -->
+  <section id="results" class="results-screen hidden">
+    <div class="controls">
+      <button class="btn" onclick="Slide(true)" data-i18n="back">Back</button>
+      <button class="btn" onclick="Print()" data-i18n="print">Print</button>
+    </div>
+
+    <!-- Matrix placeholder -->
+    <div id="matrix-container">
+      <!-- Тут підключається SVG матриця -->
+    </div>
+
+    <div id="zona-info">
+      <!-- Тексти енергій з lang.js -->
+    </div>
+  </section>
+</body>
+</html>
