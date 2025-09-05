@@ -22,6 +22,26 @@
       </a>
     </div>
   </header>
+  
+<!-- Results Screen -->
+<section id="results" class="results-screen hidden">
+  <div class="controls">
+    <button class="btn" onclick="Slide(true)" data-i18n="back">Back</button>
+    <button class="btn" onclick="Print()" data-i18n="print">Print</button>
+  </div>
+
+  <div id="matrix-container">
+    <!-- matrix.svg will be loaded here -->
+  </div>
+
+  <div id="zona-info">
+    <h3 data-i18n="energy_title">Energy Description</h3>
+    <p id="zona1"></p>
+    <p id="zona2"></p>
+    <p id="zona3"></p>
+    <p id="zona4"></p>
+  </div>
+</section>
 
   <!-- Intro Screen -->
   <main id="intro" class="intro-screen">
@@ -45,3 +65,4 @@
     <div class="controls">
       <button class="btn" onclick="Slide(true)" data-i18n="back">Back</button>
       <button class="btn" onclick="Prin
+
