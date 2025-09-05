@@ -79,3 +79,41 @@ function Calc() {
 
   Slide(false);
 }
+
+function loadMatrixSVG() {
+  return fetch("matrix.svg")
+    .then(response => response.text())
+    .then(svg => {
+      document.getElementById("matrix-container").innerHTML = svg;
+    });
+}
+
+function Calc() {
+  const dateStr = GetValue("birthday");
+  if (!dateStr) {
+    SetHTML("elabel", translations[window.currentLang].error_empty);
+    document.getElementById("elabel").style.visibility = "visible";
+    return;
+  }
+
+  const date = new Date(We2JS(dateStr));
+  if (isNaN(date)) {
+    SetHTML("elabel", translations[window.currentLang].error_invalid);
+    document.getElementById("elabel").style.visibility = "visible";
+    return;
+  }
+
+  document.getElementById("elabel").style.visibility = "hidden";
+
+  // Завантажуємо SVG і після цього запускаємо розрахунки
+  loadMatrixSVG().then(() => {
+    // TODO: викликати твої функції Kver(), обчислення масивів, SetHTML("point-XX", ...)
+    SetHTML("zona1", "Sample zone description");
+    SetHTML("zona2", "...");
+    SetHTML("zona3", "...");
+    SetHTML("zona4", "...");
+  });
+
+  Slide(false);
+}
+
