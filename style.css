@@ -1,25 +1,14 @@
-/* ====== Base Styles ====== */
-body {
-  margin: 0;
-  font-family: 'Cormorant', serif;
-  background: #fff;
-  color: #222;
-}
-
-.hidden {
-  display: none;
-}
-
-/* ====== Header ====== */
+/* Header */
 .header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
   padding: 1rem;
   background: #0A393F;
 }
 
 .lang-switcher button {
-  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   padding: 0.5rem 1rem;
   border: none;
   background: #fff;
@@ -29,76 +18,12 @@ body {
   font-weight: bold;
 }
 
-.lang-switcher button:hover {
-  background: #d2f8fc;
+.social-links img {
+  width: 28px;
+  height: 28px;
+  filter: invert(100%);
 }
 
-/* ====== Intro Screen ====== */
-.intro-screen {
-  text-align: center;
-  padding: 2rem;
-}
-
-.main-title {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  color: #0A393F;
-}
-
-.subtitle {
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
-}
-
-.input-group {
-  margin-top: 1rem;
-}
-
-.input-date {
-  padding: 0.5rem;
-  font-size: 1rem;
-  margin-right: 0.5rem;
-}
-
-.btn {
-  background: #0A393F;
-  color: #fff;
-  padding: 0.6rem 1.2rem;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-.btn:hover {
-  background: #d2f8fc;
-  color: #0A393F;
-}
-
-.error-label {
-  color: crimson;
-  font-weight: bold;
-  margin-top: 1rem;
-}
-
-/* ====== Results Screen ====== */
-.results-screen {
-  padding: 2rem;
-}
-
-.controls {
-  margin-bottom: 1.5rem;
-}
-
-#matrix-container {
-  margin: 2rem auto;
-  max-width: 800px;
-  text-align: center;
-}
-
-#zona-info {
-  margin-top: 2rem;
-  padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 12px;
+.social-links img:hover {
+  filter: invert(60%) sepia(90%) saturate(500%) hue-rotate(300deg);
 }
